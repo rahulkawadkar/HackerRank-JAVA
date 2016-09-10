@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class HackStringOne {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("STRINGS SHOULD BE ENTERED IN LOWERCASE....");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter first String....");
+		String wordOne = sc.next();
+		System.out.println("Enter second String...");
+		String wordTwo = sc.next();
+		/*
+		 * String wordOne = "zello"; String wordTwo = "world";
+		 */stringLength(wordOne, wordTwo);
+		compareString(wordOne, wordTwo);
+		capitalizeFirstLetter(wordOne, wordTwo);
+	}
+
+	public static void stringLength(String wordOne, String wordTwo) {
+		int lengthWordOne = wordOne.length(), lengthwordTwo = wordTwo.length();
+		int totalWordLength = lengthWordOne + lengthwordTwo;
+		System.out.println("string length for word one is:: " + lengthWordOne);
+		System.out.println("string length for word two is:: " + lengthwordTwo);
+		System.out.println("total String Length:: " + totalWordLength);
+
+	}
+
+	public static void compareString(String wordOne, String wordTwo) {
+		System.out.println("starting Lexical Comparison....");
+		if (wordOne.compareTo(wordTwo) < 0) {
+			System.out.println("Yes " + wordOne + " comes before " + wordTwo);
+		} else if (wordOne.compareTo(wordTwo) > 0) {
+			System.out.println("No " + wordOne + " does not come before "
+					+ wordTwo);
+		} else {
+			System.out.println(wordOne + "Is Equal to " + wordTwo);
+		}
+	}
+
+	public static void capitalizeFirstLetter(String wordOne, String wordTwo) {
+		System.out.println("Starting capitalizing first letter of Strings...");
+		String finalCapitalizedString = wordOne.substring(0, 1).toUpperCase()
+				+ wordOne.substring(1) + " "
+				+ wordTwo.substring(0, 1).toUpperCase() + wordTwo.substring(1);
+		System.out.println(finalCapitalizedString);
+	}
+
+}
