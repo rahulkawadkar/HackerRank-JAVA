@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class HackStringOne {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter String to break....");
+		String breakString = sc.next();
+		System.out.println("Enter length of substrings....");
+		int subLength = sc.nextInt();
+		stringCompareLexical(breakString, subLength);
+	}
+	
+	public static void stringCompareLexical(String wordString, int subLength) {
+		System.out.println("String entered is: "+ wordString);
+		List<String> brokenStringList = new ArrayList<String>();
+		for (int i = 0; i <= wordString.length() - subLength; i++) {
+			brokenStringList.add(wordString.substring(i, i + subLength));
+			System.out.println("Iteration "+i + "result: " + brokenStringList);
+			Collections.sort(brokenStringList);
+
+		}
+		System.out.println(brokenStringList.get(0));
+		System.out.println(brokenStringList.get(brokenStringList.size() - 1));
+	}
+
+}
