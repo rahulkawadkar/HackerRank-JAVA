@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        System.out.println("You require Table for " + N);
+        for(int i=1; i<=10; i++){
+        	System.out.println(N + " x " + i+ " = " + N*i);
+        }
+
+	}
+}
+
+
+/**
+ * 
+ * Sample Output
+ 
+45 
+You require Table for 45
+45 x 1 = 45
+45 x 2 = 90
+45 x 3 = 135
+45 x 4 = 180
+45 x 5 = 225
+45 x 6 = 270
+45 x 7 = 315
+45 x 8 = 360
+45 x 9 = 405
+45 x 10 = 450
+ *
+ */
